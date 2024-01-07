@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* 全局样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin:  0 ;
+  padding: 0 ; 
+  background-color: #f8f8f8;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+  width: 100%; /* 设置标题栏宽度为100%，使其占满整个屏幕宽度 */
+  font-size: 26px; /* 增大字体大小 */
+
+}
+header h1 {
+    margin-bottom: 80px; /* 增加标题下的边距 */
+   
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px; /* 增大字体大小 */
+  /* font-weight: bold; */
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <title>厦门大学-古泉课题组</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
+  <link href="css/swiper.css" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/index1200.css" rel="stylesheet" type="text/css" />
+  <link href="css/index960.css" rel="stylesheet" type="text/css" />
+  <link href="css/index720.css" rel="stylesheet" type="text/css" />
+  
+
+  <header>
+
+    <h1>欢迎来到厦门大学古泉课题组</h1>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">主页</a></li>
+        <li><a href="team.html" onclick="loadContent('team.html'); return false;">团队介绍</a></li>
+        <li><a href="results.html" onclick="loadContent('results.html'); return false;">课题简介</a></li>
+        <li><a href="downloads.html" onclick="loadContent('downloads.html'); return false;">下载专区</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!--   <div class="container">
+    <h2>关于我的科研成果</h2>
+    <p>在这里写一些关于你的科研成果的介绍。</p>
+  </div> -->
+
+  <div id="content" class="container">
+    <!-- 这里是页面内容，会在点击链接时更新 -->
+
+
+  <!--banner-开始-->
+  <div class="banner">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <a href="research04.html" class="swiper-slide"><img src="images/example1.gif" width="100%" /></a>
+        <a href="research02.html" class="swiper-slide"><img src="images/example1.gif" width="100%" /></a>
+        <a href="research01.html" class="swiper-slide"><img src="images/example1.gif" width="100%" /></a>
+        <a href="research03.html" class="swiper-slide"><img src="images/example1.gif" width="100%" /></a>
+        <a href="research02.html" class="swiper-slide"><img src="images/example1.gif" width="100%" /></a>
+     
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-button-black"></div>
+    <div class="swiper-button-prev swiper-button-black"></div>
+  </div>
+  <!--banner-结束-->
+
+
+  <script>
+    function loadContent(page) {
+      fetch(page)
+        .then(response => response.text())
+        .then(data => {
+          // 将其他页面的内容加载到页面下方
+          document.getElementById('content').innerHTML = data;
+        });
+    }
+  </script>
+  
+  
+<script type="text/javascript">
+  var swiper1 = new Swiper('.banner .swiper-container', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    loop: true,
+    autoplay: 3000,
+  });
+  jQuery(document).ready(function($) {
+    $(".IndNewTa").click(function() {
+      if (!$(this).hasClass('IndNewTao')) {
+        $(".IndNewTa").removeClass('IndNewTao');
+        $(this).addClass('IndNewTao');
+        $('.IndNewN').css('display', 'none');
+        $('.' + $(this).attr('title')).css('display', 'block');
+      }
+    });
+  })
+
+  $(window).resize(function() { //当浏览器大小变化时
+    if (parseFloat($('body').width()) < 768) {
+      $('.NewNrI').height($('.NewNrI').width() * 0.759);
+    }
+  });
+  var swiper1 = new Swiper('.banner .swiper-container', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    paginationClickable: true,
+    loop: true,
+    autoplay: 3000,
+  });
+  var swiper2 = new Swiper('.NewSoN', {
+    paginationClickable: true,
+    direction: 'vertical',
+    slidesPerView: 1,
+    loop: true,
+    autoplay: 3000,
+  });
+  jQuery(document).ready(function($) {
+
+  })
+</script>
+  
+
+</body>
+
+</html>
