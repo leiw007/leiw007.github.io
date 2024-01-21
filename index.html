@@ -32,10 +32,6 @@
     </nav>
   </header>
 
-<!--   <div class="container">
-    <h2>关于我的科研成果</h2>
-    <p>在这里写一些关于你的科研成果的介绍。</p>
-  </div> -->
 
   <div id="content" class="container">
     <!-- 这里是页面内容，会在点击链接时更新 -->
@@ -56,6 +52,17 @@
   </div>
   <!--banner-结束-->
 
+<script>
+  var currentCount = localStorage.getItem('counter.txt') || 0; // 使用localStorage存储计数
+  currentCount = parseInt(currentCount) + 1;
+  localStorage.setItem('counter.txt', currentCount);
+</script>
+<div id="viewCount"></div>
+
+<script>
+  var viewCount = localStorage.getItem('counter.txt') || 0;
+  document.getElementById('viewCount').innerText = '访问量：' + viewCount;
+</script>
 
   <script>
     function loadContent(page) {
