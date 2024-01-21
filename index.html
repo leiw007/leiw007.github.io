@@ -52,17 +52,7 @@
   </div>
   <!--banner-结束-->
 
-<script>
-  var currentCount = localStorage.getItem('counter.txt') || 0; // 使用localStorage存储计数
-  currentCount = parseInt(currentCount) + 1;
-  localStorage.setItem('counter.txt', currentCount);
-</script>
-<div id="viewCount"></div>
 
-<script>
-  var viewCount = localStorage.getItem('counter.txt') || 0;
-  document.getElementById('viewCount').innerText = '访问量：' + viewCount;
-</script>
 
   <script>
     function loadContent(page) {
